@@ -1,134 +1,129 @@
-/* sets the margin of all the element to 10px on all sides and the background-color to black */
-body{
-    margin: 10px;
-    background-color: black;
+/* Reset & background */
+body {
+  margin: 10px;
+  background-color: black;
 }
 
-/* Home section  which has the app name and nav bar. The styling is applied by id */
-
+/* Home section */
 #home {
-    background-color:  #483355;
-    padding-bottom: 1cm;
-    margin-left:-1cm;
-    margin-right:-1cm;
-    margin-top:-1cm;
-    padding-top: 2cm;
-    padding-bottom: 2cm;
-   }
-
-/* Application name inside the home section. The styling is applied by tag name */
-
-  header {
-    font-size: 30px;
-    color: rgb(240, 234, 245);
-    float: left;
-    padding-left: 2cm;
-  }
-
-/* Navigation Bar Container*/
-
-  .topdiv {
-    float: right;
-    padding-right: 1cm;
-  }
-  
-/* Navigation Bar Buttons */
-  .topmenu {
-    color: lightgray;
-    background-color:   #483355;
-    margin: 10px;
-    padding: 10px;
-    font-size: 20px;
-    text-decoration:none;
-    border-radius: 1mm;
-  }
-  
-  .topmenu:hover {
-    color: white;
-    font-weight: bolder;
-    background-color: #382742;
-    text-decoration: underline;
-  }
-
-  /*Container for all the conversion sections*/
-  #all-conversion-sections{
-    display: grid;
-    justify-content: center;
+  background-color: #483355;
+  margin: -1cm;
+  padding: 2cm 0 2cm 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+header h1 {
+  font-size: 2rem;
+  color: #f0eaf5;
+  margin-left: 2cm;
+}
+
+.topdiv {
+  margin-right: 2cm;
+}
+
+.topmenu {
+  color: lightgray;
+  background-color: #483355;
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  transition: 0.2s;
+}
+
+.topmenu:hover {
+  color: white;
+  background-color: #382742;
+  text-decoration: underline;
+}
+
+/* Grid layout for panels */
+#all-conversion-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Panel base style */
+.b {
+  background-color: white;
+  border-top: 20px solid;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Panel accents */
+.temperature { border-top-color: green;  }
+.weight      { border-top-color: coral;  }
+.distance    { border-top-color: cyan;   }
 
 figure {
-    float:left; 
-    justify-self: auto; 
-    width:200px
+  text-align: center;
 }
 
-img {
-    width: 200px;
+figure img {
+  width: 200px;
 }
 
-figcaption{
-    color: black;
-    font-size: 17px;
-    text-align: center;
+figcaption {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+legend {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 button {
-    font-size: 20px;
-    border: transparent;
-    border-radius: 40px;
-    width: fit-content;
-    background-color: lightgreen;
-    padding-left: 15px;
-    padding-right: 15px;
+  font-size: 1.25rem;
+  border: none;
+  background-color: lightgreen;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-button :hover {
-    cursor: pointer;
+button:hover {
+  background-color: mediumseagreen;
 }
 
-/* The calculator panel */
-.b{
-    border-top-style: solid;
-    background-color: white;
-    border-top-width: 20px;
-    width: 600px;
-    height: 400px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    display: flex;
+.iconbutton {
+  position: fixed;
+  bottom: 2rem;
+  left: 1rem;
+  background-color: #e1ebeb;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.temperature{
-    border-top-color: green;
-}
-.weight{
-    border-top-color: coral;
-}
-.distance{
-    border-top-color: cyan;
-}
-legend {
-    font-size: 30px;
-    font-weight: bolder;
-}
-/* Floating icon for the home button */
-.iconbutton{
-    width:40px;
-    height:40px;
-    border-radius: 100%;
-    background-color: rgb(225, 235, 235);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    bottom:40px;
-    left:0;
-    }
+
 .iconbutton img {
-    width:30px
+  width: 2rem;
 }
-    
+
 footer {
-    background-color:rgb(240, 234, 245);
-    margin-top: 20px;
+  background-color: #f0eaf5;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
